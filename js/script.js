@@ -8,6 +8,7 @@ $(document).ready(() => {
   $('.navigation__close').on('click', () => {
     $('.navigation_mob').removeClass('--open');
   });
+
   // sliders settings
   $('.introduction__slider').slick({
     dots: true,
