@@ -856,7 +856,7 @@ body {
   transition: color 0.3s ease-in-out;
 }
 
-.faq__question.--open {
+.--open .faq__question {
   color: #495274;
 }
 
@@ -911,7 +911,7 @@ body {
     padding 0.3s ease-in-out;
 }
 
-.faq__answer-container.--open {
+.--open .faq__answer-container {
   padding: 0 15px 62px 81px;
   opacity: 1;
   max-height: 150px;
@@ -1750,7 +1750,7 @@ body {
     padding: 0 15px 0 33px;
   }
 
-  .faq__answer-container.--open {
+  .--open .faq__answer-container {
     padding: 0 15px 47px 33px;
   }
 

@@ -1,3 +1,5 @@
+'use strict';
+
 $(document).ready(() => {
   // navigation mob
   $('.header__burger').on('click', () => {
@@ -110,9 +112,8 @@ $(document).ready(() => {
   });
 
   //faq
-  $('.faq__list-item:nth-child(n)').on('click', () => {
-    $(
-      '.faq__list-item:nth-child(n+1) .faq__answer-container, .faq__question'
-    ).toggleClass('--open');
+  $('.faq__list-item').on('click', function () {
+    console.log(this);
+    $(this).toggleClass('--open');
   });
 });
