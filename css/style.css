@@ -69,7 +69,7 @@ body {
   background-color: #ffffff;
   z-index: 10;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   font-size: 20px;
   padding: 80px;
   box-sizing: border-box;
@@ -178,6 +178,50 @@ body {
 .introduction {
   background: linear-gradient(180deg, #f4f7ff 0%, #f1f5ff 100%);
   padding: 90px 0 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.introduction__clouds {
+  width: 100%;
+  height: 100%;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+}
+
+.introduction__cloud {
+  /* filter: drop-shadow(2px 2px 4px#3d4f9f); */
+}
+
+.introduction__cloud_first {
+  top: 176px;
+  left: -120px;
+}
+
+.introduction__cloud_second {
+  top: 92px;
+  left: 253px;
+}
+
+.introduction__cloud_third {
+  top: 53px;
+  right: 108px;
+}
+
+.introduction__cloud_fourth {
+  bottom: 108px;
+  right: -60px;
+}
+
+.introduction__cloud_fifth {
+  bottom: 40px;
+  right: 202px;
+}
+
+.introduction__cloud_sixth {
+  bottom: 149px;
+  left: 245px;
 }
 
 .introduction__wrapper {
@@ -195,7 +239,6 @@ body {
   align-items: center;
   filter: drop-shadow(0px 10px 30px #e4eafb);
   position: absolute;
-  z-index: 1;
 }
 
 .introduction__popup_first {
@@ -235,10 +278,11 @@ body {
 .introduction__slider {
   display: flex;
   justify-content: center;
-  z-index: 1;
   width: 800px;
   align-self: center;
   height: 188px;
+  margin: 0 0 25px;
+  z-index: 1;
 }
 
 .introduction__slider-item {
@@ -248,7 +292,6 @@ body {
 }
 
 .introduction__play-button {
-  z-index: 1;
   transition: background-color 0.3s ease-in-out;
 }
 
@@ -287,6 +330,7 @@ body {
 .introduction__title {
   margin: 0 0 16px;
   text-align: center;
+  z-index: 1;
 }
 
 .introduction__subtitle {
@@ -342,7 +386,6 @@ body {
 .introduction__line {
   width: 100%;
   height: 100%;
-  z-index: 1;
 }
 
 .introduction__line-background {
@@ -457,6 +500,33 @@ body {
   align-items: center;
 }
 
+.about__clouds {
+  position: absolute !important;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.about__cloud {
+  position: absolute;
+}
+
+.about__cloud_first {
+  top: 143px;
+  left: 225px;
+}
+
+.about__cloud_second {
+  top: 205px;
+  right: 232px;
+}
+
+.about__cloud_third {
+  bottom: 202px;
+  left: 126px;
+}
+
 .about__image-container {
   display: flex;
   justify-content: center;
@@ -470,6 +540,7 @@ body {
 
 .about__title {
   margin: 0 0 24px;
+  z-index: 1;
 }
 
 .about__subtitle {
@@ -477,6 +548,7 @@ body {
   margin: 0 0 80px;
   font-size: 24px;
   line-height: 30px;
+  z-index: 1;
 }
 
 .about__cards {
@@ -485,6 +557,7 @@ body {
   column-gap: 9%;
   padding: 0 221px;
   margin: 0 0 120px;
+  z-index: 1;
 }
 
 .about__card {
@@ -531,6 +604,7 @@ body {
 .about__buttons {
   display: flex;
   align-items: center;
+  z-index: 1;
 }
 
 .about__button {
@@ -1301,10 +1375,19 @@ body {
 
   .navigation__item {
     padding: 8px 12px;
+    margin: 0 0 20px;
+  }
+
+  .navigation__item:last-child {
+    margin: 0;
   }
 
   .logo {
     margin: 0 25px 0 0;
+  }
+
+  .introduction .slick-slide {
+    margin: 0 25px;
   }
 
   .app {
@@ -1349,6 +1432,16 @@ body {
 
   .about {
     padding: 100px 0;
+  }
+
+  .about__cloud_first {
+    top: 188px;
+    left: 150px;
+  }
+
+  .about__cloud_second {
+    top: 57px;
+    right: 60px;
   }
 
   .about__cards {
@@ -1463,6 +1556,14 @@ body {
     bottom: 125px;
   }
 
+  .introduction__cloud_sixth {
+    left: 80px;
+  }
+
+  .introduction__cloud_second {
+    left: 100px;
+  }
+
   .introduction__popup_first {
     transform: translate(39px, 226px) scale(1.5);
   }
@@ -1498,6 +1599,15 @@ body {
 
   .about {
     padding: 70px 0;
+  }
+
+  .about__cloud_first {
+    top: 151px;
+  }
+
+  .about__cloud_third {
+    bottom: 120px;
+    left: 95px;
   }
 
   .about__subtitle {
@@ -1620,6 +1730,16 @@ body {
     display: none;
   }
 
+  .introduction__cloud_second {
+    left: 51px;
+    top: 107px;
+  }
+
+  .introduction__cloud_third {
+    top: 53px;
+    right: 48px;
+  }
+
   .introduction__slider {
     width: 100%;
   }
@@ -1632,6 +1752,10 @@ body {
   .about__cards {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 20px;
+  }
+
+  .about__clouds {
+    display: none;
   }
 
   .about__option {
@@ -1698,6 +1822,10 @@ body {
 
   .blog__button_left {
     width: 211px;
+  }
+
+  .blog .slick-arrow {
+    display: none !important;
   }
 
   .subscription__wrapper {

@@ -1,6 +1,24 @@
 'use strict';
 
 $(document).ready(() => {
+  //introduction parallax
+  const parallax = (sceneEl) => {
+    let scene = document.getElementById(sceneEl);
+    let parallaxInstance = new Parallax(scene, {
+      relativeInput: true,
+      hoverOnly: true,
+    });
+  };
+  parallax('introduction__scene');
+  parallax('about__scene');
+
+  //about parallax
+  let scene = document.getElementById('introduction__scene');
+  let parallaxInstance = new Parallax(scene, {
+    relativeInput: true,
+    hoverOnly: true,
+  });
+
   // navigation mob
   $('.header__burger').on('click', () => {
     $('.navigation_mob').addClass('--open');
@@ -114,7 +132,6 @@ $(document).ready(() => {
 
   //faq
   $('.faq__list-item').on('click', function () {
-    console.log(this);
     $(this).toggleClass('--open');
   });
 });
