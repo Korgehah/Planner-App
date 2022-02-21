@@ -83,8 +83,8 @@ $(document).ready(() => {
     let delay = 300;
     let windowHeight = $(window).height();
     $(document).on('scroll', () => {
-      let self = $('.' + className),
-        height = self.offset().top + self.height() / 2;
+      let self = $('.' + className);
+      let height = self.offset().top + self.height() / 2;
       if ($(document).scrollTop() + windowHeight >= height) {
         (function add(i) {
           $elements.eq(i).addClass(className + '_animated');
@@ -102,11 +102,11 @@ $(document).ready(() => {
   animation('about__card');
 
   // counter
-  let windowHeight = $(window).height(),
-    flag = true;
+  let windowHeight = $(window).height();
+  let flag = true;
   $(document).on('scroll', () => {
-    let self = $('.statistics__title'),
-      height = self.offset().top;
+    let self = $('.statistics__title');
+    let height = self.offset().top;
     if ($(document).scrollTop() + windowHeight >= height) {
       if (flag) {
         $('.statistics__counter').each(function () {
@@ -131,7 +131,7 @@ $(document).ready(() => {
   });
 
   //faq
-  $('.faq__list-item').on('click', function () {
-    $(this).toggleClass('--open');
+  $('.faq__question').on('click', function () {
+    $(this).closest('.faq__list-item').toggleClass('--open');
   });
 });
